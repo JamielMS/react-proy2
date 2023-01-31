@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
 import WeatherCard from './components/WeatherCard'
+import LoadCard from './components/LoadCard'
 
 function App() {
   const [coords, setCoords] = useState();
@@ -45,7 +46,7 @@ function App() {
     <div className = "App">
       {
         isLoading ?
-          <h1>Loading ...</h1>
+          <LoadCard/>
         :
           <WeatherCard
             weather = {weather}
